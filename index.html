@@ -6,22 +6,22 @@
   <script src="./lib/index.min.js"></script>
 </head>
 <body>
+
+<button onclick="window.event()" style="height: 40px">Send Event</button>
+
+</body>
 <script>
-  let client = new StEventTrackingClient("tuq111");
-  client.setGlobalProps({shop: 1, abc: 3});
-  //client.setPollInterval(1000);
-  let c = 0;
-  // setInterval(x => {
-  c++;
-  if (c < 15) {
+  function event() {
+    let client = new StEventTrackingClient("tuq11");
+    client.setGlobalProps({shop: 1, abc: 3});
+
     client.setGlobalProps({shop: "abc"});
     console.log("event")
     client.sendEvent("sample-event", {jknfk: "t4545t"});
+
   }
 
 
   // }, 500);
 </script>
-<div>Hello</div>
-</body>
 </html>
