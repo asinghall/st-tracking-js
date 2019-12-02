@@ -11,8 +11,9 @@
 
 </body>
 <script>
+  var client = new StEventTrackingClient("tuq11");
   function event() {
-    let client = new StEventTrackingClient("tuq11");
+
     client.setGlobalProps({shop: 1, abc: 3});
 
     client.setGlobalProps({shop: "abc"});
